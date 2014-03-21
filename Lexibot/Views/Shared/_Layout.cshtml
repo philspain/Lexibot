@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+	p { max-width:40em; }
+	table { margin:2em 0; }
+	th, td { padding:0.4em; width:6em; text-align:center; vertical-align:middle}
+	th { border:1px solid #ccc; border-width:0 1px 1px 0;}
+
+	/* Special styles for the demo tables */
+	#table1 td:hover { font-weight:bold; cursor:default; }
+	#table1 td:hover .bubble { opacity:1 !important; z-index:101 !important; }
+	</style>
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/UI.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Requests.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/GraphUp.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        var ui = new UI();
+        var requests = new Requests();
+
+        // position elements on document ready
+        $(document).ready(function () {
+            ui.resizeContentElements();  
+        });
+
+        $(window).load(function () {
+            ui.loadGraph('HeatMap');
+        });
+
+        $(window).resize(ui.resizeContentElements);
+    </script>
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

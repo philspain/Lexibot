@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Index";
+    int year = 0;
+    int month = 0;
+    string[] months = new string[12]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+}
+
+<div id="main-container">
+
+    <div id="header-container">
+        <div id="header" class="text-style">
+            <h1>lexiBot</h1>
+
+            <span id="welcome-text">Welcome to lexiBot: a lexical analysis of reddit comments!</span>
+            @*<button onclick="ui.navigate(0)">Left</button>
+            <button onclick="ui.navigate(1)">Middle</button>
+            <button onclick="ui.navigate(2)">Right</button>*@
+        </div>
+        
+    </div>
+
+    <div id="left-nav" class="nav-direction" onclick="ui.navigate(this.id)">
+        <img src="~/Content/images/left-nav.png" />
+    </div>
+    <div id="right-nav" class="nav-direction" onclick="ui.navigate(this.id)">
+        <img src="~/Content/images/right-nav.png" />
+    </div>
+
+    <div id="content-container">
+        <div class="pane" id="left">
+            <div id="post-container">
+                <div class="posts" id="posts"></div>
+                <div class="menu-container" id="scroll-menu-container">
+                    <dl class="menu" id="scroll-menu">
+                    
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="pane" id="middle">
+            <div id="occurrence-container">
+                <div id="occurrences">
+                    <table id="table1" cellspacing="0" style="width: 100%;">
+		                <tbody>
+                            <tr>
+			                    <th style="width:8em"></th>
+                                <th>00:00</th>
+			                    <th>01:00</th>
+			                    <th>02:00</th>
+			                    <th>03:00</th>
+			                    <th>04:00</th>
+			                    <th>05:00</th>
+			                    <th>06:00</th>
+			                    <th>07:00</th>
+                                <th>08:00</th>
+                                <th>09:00</th>
+                                <th>10:00</th>
+                                <th>11:00</th>
+                                <th>12:00</th>
+                                <th>13:00</th>
+                                <th>14:00</th>
+                                <th>15:00</th>
+                                <th>16:00</th>
+                                <th>17:00</th>
+                                <th>18:00</th>
+                                <th>19:00</th>
+                                <th>20:00</th>
+                                <th>21:00</th>
+                                <th>22:00</th>
+                                <th>23:00</th>
+		                    </tr>
+                            
+		                </tbody>
+                    </table>
+                </div>
+                <div id="occurrence-loader">
+                    <img src="~/Content/images/loading.gif" />
+                </div>
+                <div class="menu-container" id="occurrence-menu-container">
+                    <ul class="menu" id="occurrence-menu">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="pane" id="right" style="">
+        </div>
+    </div>
+</div>

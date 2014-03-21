@@ -1,0 +1,167 @@
+body
+{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    font-size: .85em;
+    font-family: Verdana, Geneva, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+    .text-style
+    {
+        font-family: Tahoma, Geneva, sans-serif;
+    }
+
+/* Style for main container */
+
+#main-container
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+    /* Styles for header container and children */
+
+    #header-container
+    {
+        background-color: #781800;
+        height: 100px;
+    }
+
+        #header
+        {
+            width: 370px;
+            margin-left: 15%;
+        }
+
+            #header h1
+            {
+                margin-top: 0px;
+                width: 100px;
+            }
+        
+        
+        #header-container hr
+        {
+            width: 80%;
+            margin-left: 10%;
+        }
+    
+    #nav-menu-container
+    {
+        width: 100%;   
+    }
+    
+    .nav-direction
+    {
+        color: #7C7062;
+        z-index: 10;
+        position: absolute;
+        width: 40px;
+    }
+    /* Styles for the content container and it's children*/
+    
+    #content-container
+    {
+        width: 1024px;
+        position: absolute;
+        z-index: 1;
+    }
+
+        .pane
+        {
+            position: absolute;
+            margin-bottom: 23px;
+            color: #7C7062;
+        }
+        
+        .movable 
+        {
+            position: absolute;
+            width: 100%;
+        }
+    
+            .div-style-0
+            {
+                background-color: #F7F6F4;
+                width: 100%; 
+                overflow: hidden;
+            }
+        
+            .div-style-1
+            {
+                background-color: #E0EAF4;
+                width: 100%; 
+                overflow: hidden;
+            }
+    
+        .menu-container
+        {
+            padding: 10px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+            .menu
+            {
+                font-family: "Lucida Console", Monaco, monospace;
+                font-weight: bold;
+                list-style: none;
+            }
+        
+            #left
+            {
+                white-space: nowrap;
+            }
+
+                #post-container
+                {
+                    position: relative;
+                    overflow: hidden;
+                }
+            
+                    #posts
+                    {
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                    }
+                    
+            #middle
+            {
+                white-space: nowrap;
+            }
+        
+                #occurrence-container
+                {
+                    position: relative;
+                    overflow: hidden;
+                }
+            
+                    #occurrences
+                    {
+                        position: absolute;
+                        width: 100%;
+                        left: 0px;
+                        top: 0px;
+                        z-index: 1;
+                        visibility: hidden;
+                    }
+
+                    #occurrence-loader {
+                       position: absolute;
+                       width: 100%;
+                       z-index: 10; 
+                    }
+
+                        #occurrence-loader img {
+                            width: 100px;
+                            height: 100px;
+                            margin-right: auto;
+                            margin-left: auto;
+                            position: relative;
+                            display: block;
+                        }

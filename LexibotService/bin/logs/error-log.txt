@@ -1,0 +1,135 @@
+
+------ Begin Error 13/02/2014 23:06:37: ------
+The type initializer for 'System.Data.Entity.Internal.AppConfig' threw an exception.
+System.Configuration.ConfigurationErrorsException: Unrecognized element 'connectionStrings'. (C:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotService\bin\Debug\LexibotService.exe.Config line 8)
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Data.Entity.Internal.AppConfig..ctor()
+   at System.Data.Entity.Internal.AppConfig..cctor()
+EntityFramework
+   at System.Data.Entity.DbContext..ctor()
+   at LexibotData.Models.LexibotEntities..ctor()
+   at LexibotService.Service1.DoWork() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotService\Service1.cs:line 59
+------ End Error ------
+
+------ Begin Error 13/02/2014 23:09:38: ------
+No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+
+EntityFramework
+   at System.Data.Entity.Infrastructure.DependencyResolution.DefaultProviderServicesResolver.GetService(Type type, Object key)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at System.Data.Entity.Infrastructure.DependencyResolution.CachingDependencyResolver.GetService(Type type, Object key)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Data.Entity.Infrastructure.DependencyResolution.CompositeResolver`2.GetService(Type type, Object key)
+   at System.Data.Entity.Infrastructure.DependencyResolution.DbDependencyResolverExtensions.GetService[T](IDbDependencyResolver resolver, Object key)
+   at System.Data.Entity.Infrastructure.DefaultManifestTokenResolver.<>c__DisplayClass1.<ResolveManifestToken>b__0(Tuple`3 k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at System.Data.Entity.Infrastructure.DefaultManifestTokenResolver.ResolveManifestToken(DbConnection connection)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at LexibotData.Reddit.RedditBot.GetMe() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 108
+   at LexibotData.Reddit.RedditBot..ctor(WordParser wordParser, EntityDbManager dbManager, LexibotEntities lexibotEntities) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 52
+   at LexibotService.Service1.DoWork() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotService\Service1.cs:line 62
+------ End Error ------
+
+------ Begin Error 13/02/2014 23:12:00: ------
+The Entity Framework provider type 'System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer' registered in the application config file for the ADO.NET provider with invariant name 'System.Data.SqlClient' could not be loaded. Make sure that the assembly-qualified name is used and that the assembly is available to the running application. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+
+EntityFramework
+   at System.Data.Entity.Infrastructure.DependencyResolution.ProviderServicesFactory.GetInstance(String providerTypeName, String providerInvariantName)
+   at System.Data.Entity.Internal.AppConfig.<.ctor>b__2(ProviderElement e)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Internal.AppConfig.<.ctor>b__1()
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Data.Entity.Internal.AppConfig.get_DbProviderServices()
+   at System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.RegisterDbProviderServices()
+   at System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.GetServiceFactory(Type type, String name)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.GetService(Type type, Object key)
+   at System.Data.Entity.Infrastructure.DependencyResolution.DbDependencyResolverExtensions.GetServiceAsServices(IDbDependencyResolver resolver, Type type, Object key)
+   at System.Linq.Enumerable.<SelectManyIterator>d__14`2.MoveNext()
+   at System.Linq.Enumerable.<ConcatIterator>d__71`1.MoveNext()
+   at System.Linq.Enumerable.<OfTypeIterator>d__aa`1.MoveNext()
+   at System.Data.Entity.Utilities.IEnumerableExtensions.Each[T](IEnumerable`1 ts, Action`1 action)
+   at System.Data.Entity.Infrastructure.DependencyResolution.DbConfigurationManager.<.ctor>b__1()
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Data.Entity.Infrastructure.DependencyResolution.DbConfigurationManager.GetConfiguration()
+   at System.Data.Entity.DbContext.InitializeLazyInternalContext(IInternalConnection internalConnection, DbCompiledModel model)
+   at LexibotData.Models.LexibotEntities..ctor()
+   at LexibotService.Service1.DoWork() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotService\Service1.cs:line 59
+------ End Error ------
+
+------ Begin Error 13/02/2014 23:29:09: ------
+Thread was being aborted.
+
+mscorlib
+   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   at System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.get_Relationships()
+   at System.Data.Entity.Core.Objects.ObjectStateManager.PerformDelete(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.GetStateEntry(Object entity)
+   at System.Data.Entity.DbContext.Entry[TEntity](TEntity entity)
+   at LexibotData.DataAccess.EntityDbManager.AddWordOccurence(String word, String occurrenceId, Int32 occurrence, DateTime createdUTC, String subReddit) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\DataAccess\EntityDbManager.cs:line 28
+   at LexibotData.DataAccess.EntityDbManager.AddWordOccurrences(Dictionary`2 wordOccurrences, String subReddit, DateTime createdUTC) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\DataAccess\EntityDbManager.cs:line 48
+   at LexibotData.Reddit.RedditBot.ParseComments(Dictionary`2 commentCache) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 290
+   at LexibotData.Reddit.RedditBot.Run() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 324
+   at LexibotService.Service1.DoWork() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotService\Service1.cs:line 65
+------ End Error ------
+
+------ Begin Error 22/02/2014 15:04:54: ------
+Thread was being aborted.
+
+mscorlib
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at LexibotData.Reddit.RedditBot.GetCommentCache(Dictionary`2 links) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 215
+   at LexibotData.Reddit.RedditBot.Run() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 323
+   at LexibotService.Service1.DoWork() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotService\Service1.cs:line 65
+------ End Error ------
+
+------ Begin Error 22/02/2014 16:19:34: ------
+Thread was being aborted.
+
+mscorlib
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at System.Data.Entity.Core.Objects.EntityEntry.FindOriginalValueIndex(StateManagerMemberMetadata metadata, Object instance)
+   at System.Data.Entity.Core.Objects.EntityEntry.DetectChangesInProperty(Int32 ordinal, Boolean detectOnlyComplexProperties, Boolean detectOnly)
+   at System.Data.Entity.Core.Objects.EntityEntry.DetectChangesInProperties(Boolean detectOnlyComplexProperties)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChangesInScalarAndComplexProperties(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at LexibotData.DataAccess.EntityDbManager.AddWordOccurrence(String word, String occurrenceId, Int32 occurrence, DateTime createdUTC, String subReddit) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\DataAccess\EntityDbManager.cs:line 38
+   at LexibotData.DataAccess.EntityDbManager.AddWordOccurrences(Dictionary`2 wordOccurrences, String subReddit, DateTime createdUTC) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\DataAccess\EntityDbManager.cs:line 48
+   at LexibotData.Reddit.RedditBot.ParseComments(Dictionary`2 commentCache) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 290
+   at LexibotData.Reddit.RedditBot.Run() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 324
+   at LexibotService.Service1.DoWork() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotService\Service1.cs:line 65
+------ End Error ------
+
+------ Begin Error 23/02/2014 17:34:02: ------
+Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+
+EntityFramework
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at LexibotData.DataAccess.EntityDbManager.AddWordOccurrences(Dictionary`2 wordOccurrences, String subReddit, DateTime createdUTC) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\DataAccess\EntityDbManager.cs:line 51
+   at LexibotData.Reddit.RedditBot.ParseComments(Dictionary`2 commentCache) in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 290
+   at LexibotData.Reddit.RedditBot.Run() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotData\Reddit\RedditBot.cs:line 324
+   at LexibotService.Service1.DoWork() in c:\Users\phil\Documents\dev\dotnet\Lexibot\LexibotService\Service1.cs:line 65
+------ End Error ------
